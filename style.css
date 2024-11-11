@@ -152,11 +152,11 @@ main {
     background: #3498DB;
 }
 
-/* Футер */
 footer {
-    background: #2980B9;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 1em;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }
