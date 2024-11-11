@@ -7,9 +7,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden;
 }
 
 .container {
@@ -17,9 +17,45 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3 {
-    font-family: 'Helvetica', sans-serif;
+/* Анимация для заголовка */
+.animated-title {
+    font-size: 2.5em;
     color: #2C3E50;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+/* Анимация для разделов */
+.animated-section {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+/* Анимация для кнопок */
+.animated-button {
+    background: #2980B9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.animated-button:hover {
+    background: #3498DB;
+    transform: scale(1.1);
+}
+
+/* Анимация появления для заголовков и разделов */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Хедер */
@@ -29,15 +65,12 @@ header {
     padding: 20px 0;
 }
 
-header h1 {
-    font-size: 2.5em;
-}
-
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    animation: fadeIn 1s ease-out;
 }
 
 header nav ul li {
@@ -48,10 +81,11 @@ header nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
+    transition: color 0.3s;
 }
 
 header nav ul li a:hover {
-    text-decoration: underline;
+    color: #3498DB;
 }
 
 /* Основные секции */
@@ -69,35 +103,13 @@ main {
 .intro h2 {
     margin-bottom: 20px;
     font-size: 2em;
-}
-
-.intro p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out;
 }
 
 .intro ul {
     list-style: none;
-    padding: 0;
     margin: 20px 0;
-}
-
-.intro ul li {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.intro .btn {
-    background: #2980B9;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-.intro .btn:hover {
-    background: #3498DB;
+    animation: fadeIn 1.5s ease-out;
 }
 
 /* Особенности */
@@ -107,28 +119,12 @@ main {
     text-align: center;
 }
 
-.features .feature {
-    margin: 20px 0;
-}
-
 .features .feature h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
 /* Контактная форма */
-.contact {
-    padding: 40px 0;
-    background: #ECF0F1;
-    text-align: center;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .contact form input, .contact form textarea {
     width: 100%;
     max-width: 400px;
@@ -137,6 +133,7 @@ main {
     border: 1px solid #BDC3C7;
     border-radius: 5px;
     font-size: 1em;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .contact form button {
@@ -146,17 +143,16 @@ main {
     border: none;
     border-radius: 5px;
     font-size: 1.2em;
-}
-
-.contact form button:hover {
-    background: #3498DB;
+    animation: fadeIn 1.5s ease-out;
 }
 
 footer {
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 10px;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    animation: fadeIn 1s ease-out;
 }
